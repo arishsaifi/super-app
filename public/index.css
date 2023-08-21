@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: beige;
+}
+
+.error {
+  color: red;
+}
+
+.form {
+  text-align: center;
+  padding: 9vh 10vh;
+  /* margin: 10vh; */
+}
+
+.registration-page-heading {
+  color: #72DB73;
+  font-family: "Architects Daughter", cursive;
+  font-weight: 400;
+  line-height: 139.688%;
+}
+
+.input-box {
+  width: 40vh;
+  height: 6vh;
+  border: 1.2px solid black;
+  flex-shrink: 0;
+  border-radius: 3.816px;
+  color: aliceblue;
+  background: #292929
+}
+
+.my-btn {
+  border-radius: 28px;
+  background: #72DB73;
+  width: 42vh;
+  height: 7vh;
+  color: aliceblue;
+}
+.registration-footer{
+  padding-left: 90px;
+  text-align: left;
+  font-size: x-small;
+
+  color: gray;
+}
+
+.homeheading{
+  position: absolute;
+  bottom: 3vh;
+  left: 3.5vh;
+  color: white;
+  font-size:55px;
+  font-weight: 900;
+  max-width: 50vw;
+}
