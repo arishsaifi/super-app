@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/signup.png"
-const SignupImage = () =>{
+import logo from './signup.png'
+const SignLeft = () =>{
     console.log(logo)
     return <>
         <p className="homeheading"> Discover new things on SuperApp</p>
@@ -12,4 +12,4 @@ const SignupImage = () =>{
     </>
 }
 
-export default SignupImage;
+export default SignLeft

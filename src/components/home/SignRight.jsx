@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
-import Form from 'react-bootstrap/Form';
+import {useState} from 'react'
 
-const SignupForm = () => {
-    const [name, setName] = useState('');
-    const [userName, setuserName] = useState('');
-    const [email, setEmail] = useState('');
-    const [mobile, setmobile] = useState('');
-    const [acceptedTerms, setAcceptedTerms] = useState(false);
 
-    const [nameError, setnameError] = useState('');
-    const [usernameError, setusernameError] = useState('');
-    const [emailError, setEmailError] = useState('');
-    const [mobileError, setmobileError] = useState('');
-    const [termsError, setTermsError] = useState('');
+const SignRight = () => {
+    const [name, setName] = useState('')
+    const [userName,setuserName] = useState('')
+    const [email,setEmail] = useState('')
+    const [mobile,setmobile] = useState('')
+    const [acceptedTerms,setAcceptedTerms] = useState('')
 
-    const handleRegistration = () => {
+    const [nameError,setnameError] = useState('')
+    const [usernameError,setusernameError] = useState('')
+    const [emailError,setEmailError] = useState('')
+    const [mobileError,setmobileError] = useState('')
+    const [termsError,setTermsError] = useState('')
+
+    const handleRegistration = (e) => {
         // Reset error messages
+        e.preventDefault();
+
         setnameError('');
         setusernameError('');
         setEmailError('');
@@ -57,27 +59,23 @@ const SignupForm = () => {
         setAcceptedTerms(false);
         
     };
-
-
+    
 
     return (
-        
-        <div className='form'>
-            <h2 className='registration-page-heading'>Super App</h2>
-            <h4>Create your new account</h4>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-            <input
+    <div className='form'>
+        <h2 className='registration-page-heading'>Super App</h2>
+        <h4>Create your new account</h4>
+        <form>
+        <input
             className='input-box'
                 type="text"
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
-            </Form.Group>
-
+            <br />
             <span className="error">{nameError}</span>
             <br />
-            <Form.Group className="mb-3" controlId="formBasicEmail">
             <input
              className='input-box'
                 type="text"
@@ -85,10 +83,10 @@ const SignupForm = () => {
                 value={userName}
                 onChange={(e) => setuserName(e.target.value)}
             />
-             </Form.Group>
+             <br />
             <span className="error">{usernameError}</span>
             <br />
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            
             <input
                 type="email"
                 className='input-box'
@@ -96,10 +94,10 @@ const SignupForm = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
             />
-             </Form.Group>
+            <br />
             <span className="error">{emailError}</span>
             <br />
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            
             <input
                 type="number"
                 className='input-box'
@@ -110,10 +108,10 @@ const SignupForm = () => {
             <br />
             <span className="error">{mobileError}</span>
 
-            </Form.Group>
+           
            
             <br />
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            
             <label>
                 <input
                     type="checkbox"
@@ -122,12 +120,13 @@ const SignupForm = () => {
                 />
                Share my registration data with Superapp
             </label>
-            </Form.Group>
+            <br />
             <span className="error">{termsError}</span>
             <br />
             <button onClick={handleRegistration} className='my-btn'>Sign Up</button>
-            <br />
-            <div className='registration-footer'>
+            {/* <button className='my-btn ' placeholder='har'/> */}
+        </form>
+        <div className='registration-footer'>
                 <p>
                     By clicking on Sign up. you agree to Superapp <a href="" style={{ color: "rgba(114, 219, 115, 1)" }}>Terms and Conditions of Use</a>
                 </p>
@@ -135,8 +134,8 @@ const SignupForm = () => {
                     To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <a href="https://github.com/arishsaifi/privacy-policy" target='_blank' style={{ color: "rgba(114, 219, 115, 1)" }}>Privacy Policy</a>
                 </p>
             </div>
-        </div>
-    );
+    </div>
+  )
 }
 
-export default SignupForm;
+export default SignRight

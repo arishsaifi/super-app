@@ -1,7 +1,7 @@
 import React from "react";
-import SignupImage from "../components/SignupImage";
-import SignupForm from "../components/SignupForm"
+import SignLeft from "../components/home/SignLeft";
 
+import SignRight from "../components/home/SignRight";
 const Home = () => {
 
     const main = {
@@ -19,11 +19,14 @@ const Home = () => {
 
     return (
         <section style={main} >
-       <div> <SignupImage style={left}/></div>
-        <div><SignupForm style={right}/></div>
+       <div> <SignLeft style={left}/></div>
+        <div><SignRight style={right}/></div>
 
         </section>
-       
+    //    <>
+    //     {/* <SignLeft /> */}
+    //     <SignupForm />
+    //    </>
     )
 }
 
