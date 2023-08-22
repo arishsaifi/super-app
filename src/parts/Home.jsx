@@ -1,7 +1,8 @@
 import React from "react";
 import SignLeft from "../components/home/SignLeft";
-
 import SignRight from "../components/home/SignRight";
+
+
 const Home = () => {
 
     const main = {
