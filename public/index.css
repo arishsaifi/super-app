@@ -48,11 +48,12 @@ body {
 }
 
 .homeheading{
-  position: absolute;
-  bottom: 3vh;
   left: 3.5vh;
+  position: fixed;
+  bottom: 3vh;
+  /* display: block; */
   color: white;
-  font-size:55px;
+  font-size:xx-large;
   font-weight: 900;
   max-width: 50vw;
 }
